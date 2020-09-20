@@ -1,11 +1,10 @@
 {
   "name": "@zpectah/iogart-ui",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "CSS toolkit for easy web app development",
   "main": "src/styles/index.styl",
   "scripts": {
-    "postinstall": "echo 'Updating build folder' && gulp dev",
-    "build": "echo 'Creating new build' && gulp dev"
+    "build": "echo 'Creating/Updating build folder' && gulp dev"
   },
   "keywords": [
     "web",

@@ -8,7 +8,7 @@ button()
     align-items center
     justify-content space-between
     font-size 1rem
-    font-weight $font-weight-base
+    font-weight $font-weight-bold
     text-decoration none
     box-sizing border-box
     appearance button
@@ -32,6 +32,7 @@ button-sizes()
         min-height $spacer
         padding ( $spacer * 0.75 )  $spacer
         font-size $font-size--sm
+        font-weight $font-weight-base
 
     &.lg
         min-height ( $spacer * 2.5 )
@@ -40,8 +41,8 @@ button-sizes()
 
 
 button-icon()
-    width 2em
-    height 2em
+    width 1.25em
+    height 1em
     display inline-flex
     align-items center
     justify-content center

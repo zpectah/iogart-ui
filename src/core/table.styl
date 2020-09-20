@@ -10,8 +10,9 @@
         tr
             th,
             td
-                padding $spacer $spacer
+                padding $table-column-padding
                 font-size 1rem
+                line-height 1.15
                 border-bottom 1px $border-default-style
 
                 &.{$status.disabled}
@@ -21,7 +22,7 @@
                 color-accents-block()
 
             th
-                font-weight 600
+                font-weight $font-weight-bold
 
 
             &.{$status.disabled} th,

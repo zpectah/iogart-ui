@@ -5,11 +5,10 @@
 CSS toolkit for easy web app development. See full documentation here ... //TODO
 
 ## Development & Custom build
-
 ``$ npm install``
 
+## Development & Custom build
 ``$ npm run build``
-
 
 ## Features
 
