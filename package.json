@@ -1,5 +1,5 @@
 {
-  "name": "iogart-ui",
+  "name": "@zpectah/iogart-ui",
   "version": "1.0.0",
   "description": "CSS toolkit for easy web app development",
   "main": "src/styles/index.styl",
@@ -15,7 +15,16 @@
   ],
   "author": "Tomas Sychra | zpecter.com",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "git@github.com:zpectah/iogart-ui.git"
+  },
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "homepage": "https://github.com/zpectah/iogart-ui#readme",
+  "bugs": {
+    "url" : "https://github.com/zpectah/iogart-ui/issues",
+    "email" : "sychrat@gmail.com"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
