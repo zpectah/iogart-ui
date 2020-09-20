@@ -1,0 +1,31 @@
+/*
+Shadow
+*/
+
+.{$utils.shadow}
+    shadow( rgba($shadow-color-default, .06) )
+
+    &{$pfxType}none
+        box-shadow none $sfxImportant
+
+    &{$pfxType}xs
+        shadow-xs( rgba($shadow-color-default, .065) )
+
+    &{$pfxType}sm
+        shadow-sm( rgba($shadow-color-default, .065) )
+
+    &{$pfxType}lg
+        shadow-lg( rgba($shadow-color-default, .0675) )
+
+    &{$pfxType}xl
+        shadow-xl( rgba($shadow-color-default, .065), rgba($shadow-color-default, .065) )
+
+
+    &{$pfxType}{$utils._shadow_hoverable}
+        shadow( rgba($shadow-color-default, .05) )
+        transition-default( box-shadow )
+
+        &:hover
+        &:focus
+            shadow-sm( rgba($shadow-color-default, .15) )
+

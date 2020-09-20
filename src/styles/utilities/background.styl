@@ -1,0 +1,15 @@
+/*
+Background
+*/
+
+.{$utils.background}
+    for key, obj in $color-context
+        &{$pfxType}{key}
+            background-color obj.base
+
+
+    for key, obj in $color-context
+        &{$pfxType}{$utils._background_gradient}{$pfxType}{key}
+            background-image linear-gradient( gradient-degree, obj.base, obj.grad )
+
+

@@ -1,0 +1,34 @@
+menu()
+    margin 0
+    padding 0
+    list-style none
+    display flex
+    flex-flow row
+    flex-wrap wrap
+
+    & a
+        text-decoration none
+        color $grey-8
+
+    & > a,
+    & > span
+    & > li
+        margin 0
+        padding $spacer ( $spacer * 1.25 )
+        display flex
+        align-items center
+        justify-content center
+        color $grey-8
+
+        &:hover
+            color $grey-8
+            background-color $grey-1
+
+        &.{$status.active},
+        &.{$status.active}:hover
+            color $light
+            background-color $color-active
+
+            & a
+                color $light
+

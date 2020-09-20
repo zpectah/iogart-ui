@@ -1,0 +1,21 @@
+/*
+Overflow
+*/
+
+.{$utils.overflow}
+    &{$pfxType}auto
+        overflow auto $sfxImportant
+
+    &{$pfxType}hidden
+        overflow hidden $sfxImportant
+
+
+for point in $breakpoints--min
+    +media-breakpoint-up( point )
+        .{$utils.overflow}
+            &{$pfxType}auto{$pfxMod}{point}
+                overflow auto $sfxImportant
+
+            &{$pfxType}hidden{$pfxMod}{point}
+                overflow hidden $sfxImportant
+

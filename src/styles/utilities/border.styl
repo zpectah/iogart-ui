@@ -1,0 +1,180 @@
+/*
+Border
+*/
+
+.{$utils.border}
+    border 1px $border-default-style $sfxImportant
+
+    &{$pfxType}{$context.none}
+         border none $sfxImportant
+
+    /* top */
+    &{$pfxType}{$context.top}
+        border-top 1px $border-default-style $sfxImportant
+
+        &{$pfxType}{$context.none}
+            border none $sfxImportant
+
+    /* right */
+    &{$pfxType}{$context.right}
+        border-right 1px $border-default-style $sfxImportant
+
+        &{$pfxType}{$context.none}
+            border-right none $sfxImportant
+
+    /* bottom */
+    &{$pfxType}{$context.bottom}
+        border-bottom 1px $border-default-style $sfxImportant
+
+        &{$pfxType}{$context.none}
+            border-bottom none $sfxImportant
+
+    /* left */
+    &{$pfxType}{$context.left}
+        border-left 1px $border-default-style $sfxImportant
+
+        &{$pfxType}{$context.none}
+            border-left none $sfxImportant
+
+
+    /*
+    Color
+    */
+    for key, obj in $color-context
+        &{$pfxType}{key}
+            border-color obj.base $sfxImportant
+
+
+    /* radius */
+    &{$pfxType}{$utils._border_radius}
+        &{$pfxType}0
+             border-radius 0 $sfxImportant
+
+        &{$pfxType}100
+             border-radius 100% $sfxImportant
+
+        for key in $lstBorderRds
+            &{$pfxType}{key}
+                 border-radius key * $coef-borderRds $sfxImportant
+
+
+        /* top */
+        &{$pfxType}{$context.top}
+            &{$pfxType}0
+                 border-top-left-radius 0 $sfxImportant
+                 border-top-right-radius 0 $sfxImportant
+
+            &{$pfxType}100
+                 border-top-left-radius 100% $sfxImportant
+                 border-top-right-radius 100% $sfxImportant
+
+            for key in $lstBorderRds
+                &{$pfxType}{key}
+                    border-top-left-radius key * $coef-borderRds $sfxImportant
+                    border-top-right-radius key * $coef-borderRds $sfxImportant
+
+
+        /* right */
+        &{$pfxType}{$context.right}
+            &{$pfxType}0
+                 border-top-right-radius 0 $sfxImportant
+                 border-bottom-right-radius 0 $sfxImportant
+
+            &{$pfxType}100
+                 border-top-right-radius 100% $sfxImportant
+                 border-bottom-right-radius 100% $sfxImportant
+
+            for key in $lstBorderRds
+                &{$pfxType}{key}
+                    border-top-right-radius key * $coef-borderRds $sfxImportant
+                    border-bottom-right-radius key * $coef-borderRds $sfxImportant
+
+
+        /* bottom */
+        &{$pfxType}{$context.bottom}
+            &{$pfxType}0
+                 border-bottom-left-radius 0 $sfxImportant
+                 border-bottom-right-radius 0 $sfxImportant
+
+            &{$pfxType}100
+                 border-bottom-left-radius 100% $sfxImportant
+                 border-bottom-right-radius 100% $sfxImportant
+
+            for key in $lstBorderRds
+                &{$pfxType}{key}
+                    border-bottom-left-radius key * $coef-borderRds $sfxImportant
+                    border-bottom-right-radius key * $coef-borderRds $sfxImportant
+
+
+        /* left */
+        &{$pfxType}{$context.left}
+            &{$pfxType}0
+                 border-top-left-radius 0 $sfxImportant
+                 border-bottom-left-radius 0 $sfxImportant
+
+            &{$pfxType}100
+                 border-top-left-radius 100% $sfxImportant
+                 border-bottom-left-radius 100% $sfxImportant
+
+            for key in $lstBorderRds
+                &{$pfxType}{key}
+                    border-top-left-radius key * $coef-borderRds $sfxImportant
+                    border-bottom-left-radius key * $coef-borderRds $sfxImportant
+
+
+        /* top-left */
+        &{$pfxType}{$context.top}{$context.left}
+            &{$pfxType}0
+                 border-top-left-radius 0 $sfxImportant
+
+            &{$pfxType}100
+                 border-top-left-radius 100% $sfxImportant
+
+            for key in $lstBorderRds
+                &{$pfxType}{key}
+                    border-top-left-radius key * $coef-borderRds $sfxImportant
+
+
+        /* top-right */
+        &{$pfxType}{$context.top}{$context.right}
+            &{$pfxType}0
+                 border-top-right-radius 0 $sfxImportant
+
+            &{$pfxType}100
+                 border-top-right-radius 100% $sfxImportant
+
+            for key in $lstBorderRds
+                &{$pfxType}{key}
+                    border-top-right-radius key * $coef-borderRds $sfxImportant
+
+
+        /* bottom-left */
+        &{$pfxType}{$context.bottom}{$context.left}
+            &{$pfxType}0
+                 border-bottom-left-radius 0 $sfxImportant
+
+            &{$pfxType}100
+                 border-bottom-left-radius 100% $sfxImportant
+
+            for key in $lstBorderRds
+                &{$pfxType}{key}
+                    border-bottom-left-radius key * $coef-borderRds $sfxImportant
+
+
+        /* bottom-right */
+        &{$pfxType}{$context.bottom}{$context.right}
+            &{$pfxType}0
+                 border-bottom-right-radius 0 $sfxImportant
+
+            &{$pfxType}100
+                 border-bottom-right-radius 100% $sfxImportant
+
+            for key in $lstBorderRds
+                &{$pfxType}{key}
+                    border-bottom-right-radius key * $coef-borderRds $sfxImportant
+
+
+
+
+
+

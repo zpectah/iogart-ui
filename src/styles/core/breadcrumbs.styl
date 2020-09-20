@@ -1,0 +1,28 @@
+.{$core.breadcrumbs}
+    & ul,
+    & ol
+        margin-left 0
+
+    &{$pfxType}{$core._breadcrumbs_item}
+        display inline-flex
+
+        a
+            text-decoration none
+
+            &:hover,
+            &:focus
+                text-decoration none
+
+        &::after
+            content '>'
+            width auto
+            height auto
+            margin 0
+            padding 0 .35em
+            display inline-flex
+
+        &:last-of-type::after
+            display none
+
+    span.{$core.breadcrumbs}{$pfxType}{$core._breadcrumbs_item}
+        margin 0

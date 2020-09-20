@@ -1,0 +1,142 @@
+/*
+Padding
+*/
+
+.{$utils.padding}
+    &{$pfxType}0
+        padding 0 $sfxImportant
+
+    for num in $lstRems
+        &{$pfxType}{num}
+            padding num*1rem $sfxImportant
+
+
+    &{$pfxType}{$context.x-axis}
+        &{$pfxType}0
+            padding-left 0 $sfxImportant
+            padding-right 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                padding-left num*1rem $sfxImportant
+                padding-right num*1rem $sfxImportant
+
+
+    &{$pfxType}{$context.y-axis}
+        &{$pfxType}0
+            padding-top 0 $sfxImportant
+            padding-bottom 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                padding-top num*1rem $sfxImportant
+                padding-bottom num*1rem $sfxImportant
+
+
+    &{$pfxType}{$context.top}
+        &{$pfxType}0
+            padding-top 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                padding-top num*1rem $sfxImportant
+
+
+    &{$pfxType}{$context.right}
+        &{$pfxType}0
+            padding-right 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                padding-right num*1rem $sfxImportant
+
+
+    &{$pfxType}{$context.bottom}
+        &{$pfxType}0
+            padding-bottom 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                padding-bottom num*1rem $sfxImportant
+
+
+    &{$pfxType}{$context.left}
+        &{$pfxType}0
+            padding-left 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                padding-left num*1rem $sfxImportant
+
+
+if $padding-use-responsive-prefixes
+    for point in $breakpoints--min
+        +media-breakpoint-up( point )
+            .{$utils.padding}
+
+                &{$pfxType}0{$pfxMod}{point}
+                     padding 0 $sfxImportant
+
+                for num in $lstRems
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        padding num*1rem $sfxImportant
+
+
+                &{$pfxType}{$context.x-axis}
+                    &{$pfxType}0{$pfxMod}{point}
+                         padding-left 0 $sfxImportant
+                         padding-right 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            padding-left num*1rem $sfxImportant
+                            padding-right num*1rem $sfxImportant
+
+
+                &{$pfxType}{$context.y-axis}
+                    &{$pfxType}0{$pfxMod}{point}
+                         padding-top 0 $sfxImportant
+                         padding-bottom 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxMod}{num}{$pfxMod}{point}
+                            padding-top num*1rem $sfxImportant
+                            padding-bottom num*1rem $sfxImportant
+
+
+                &{$pfxType}{$context.top}
+                    &{$pfxType}0{$pfxMod}{point}
+                         padding-top 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            padding-top num*1rem $sfxImportant
+
+
+                &{$pfxType}{$context.right}
+                    &{$pfxType}0{$pfxMod}{point}
+                         padding-right 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            padding-right num*1rem $sfxImportant
+
+
+                &{$pfxType}{$context.bottom}
+                    &{$pfxType}0{$pfxMod}{point}
+                         padding-bottom 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            padding-bottom num*1rem $sfxImportant
+
+
+                &{$pfxType}{$context.left}
+                    &{$pfxType}0{$pfxMod}{point}
+                         padding-left 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            padding-left num*1rem $sfxImportant
+
+

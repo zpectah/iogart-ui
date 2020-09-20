@@ -1,0 +1,45 @@
+/*
+Position
+*/
+
+.{$utils.position}
+    for num in $lstPosition
+        &{$pfxType}{num}
+            position num $sfxImportant
+
+
+/*
+Align
+*/
+.{$utils.top}
+    top 0 $sfxImportant
+
+.{$utils.left}
+    left 0 $sfxImportant
+
+.{$utils.bottom}
+    bottom 0 $sfxImportant
+
+.{$utils.right}
+    right 0 $sfxImportant
+
+
+for point in $breakpoints--min
+    +media-breakpoint-up( point )
+        .{$utils.position}
+            for num in $lstPosition
+                &{$pfxType}{num}{$pfxMod}{point}
+                    position num $sfxImportant
+
+        .{$utils.top}{$pfxMod}{point}
+            top 0 $sfxImportant
+
+        .{$utils.left}{$pfxMod}{point}
+            left 0 $sfxImportant
+
+        .{$utils.bottom}{$pfxMod}{point}
+            bottom 0 $sfxImportant
+
+        .{$utils.right}{$pfxMod}{point}
+            right 0 $sfxImportant
+

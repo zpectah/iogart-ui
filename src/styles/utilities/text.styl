@@ -1,0 +1,124 @@
+/*
+Text
+*/
+
+.{$utils.text}
+    &{$pfxType}{$context.x-axis}
+        for num in $lstAlignText
+            &{$pfxType}{num}
+                text-align num $sfxImportant
+
+    &{$pfxType}{$context.y-axis}
+        for num in $lstAlignVertical
+            &{$pfxType}{num}
+                vertical-align num $sfxImportant
+
+
+    &{$pfxType}{$utils._text_truncate}
+        white-space nowrap $sfxImportant
+        overflow hidden $sfxImportant
+        text-overflow ellipsis $sfxImportant
+
+    &{$pfxType}{$utils._text_lowercase}
+        text-transform lowercase $sfxImportant
+
+    &{$pfxType}{$utils._text_uppercase}
+        text-transform uppercase $sfxImportant
+
+    &{$pfxType}{$utils._text_capitalize}
+        text-transform capitalize $sfxImportant
+
+
+    &{$pfxType}{$utils._text_decoration}
+        &{$pfxType}none
+            text-decoration none $sfxImportant
+
+        &{$pfxType}underline
+            text-decoration underline $sfxImportant
+
+        &{$pfxType}line-through
+            text-decoration line-through $sfxImportant
+
+
+    &{$pfxType}{$utils._text_width}
+        &{$pfxType}bold
+            font-weight bold $sfxImportant
+
+        &{$pfxType}bolder
+            font-weight bolder $sfxImportant
+
+        &{$pfxType}normal
+            font-weight normal $sfxImportant
+
+        &{$pfxType}light
+            font-weight light $sfxImportant
+
+        &{$pfxType}lighter
+            font-weight lighter $sfxImportant
+
+
+    &{$pfxType}{$utils._text_style}
+        &{$pfxType}normal
+            font-style normal $sfxImportant
+
+        &{$pfxType}italic
+            font-style italic $sfxImportant
+
+
+    &{$pfxType}{$utils._text_size}
+        &{$pfxType}sm
+            font-size 80% $sfxImportant
+
+        &{$pfxType}md
+            font-size 100% $sfxImportant
+
+        &{$pfxType}lg
+            font-size 120% $sfxImportant
+
+
+    &{$pfxType}{$utils._text_muted}
+        text-muted()
+
+    &{$pfxType}{$utils._text_reset}
+        text-decoration inherit $sfxImportant
+        color inherit $sfxImportant
+
+        &:hover
+            color inherit $sfxImportant
+
+
+    &{$pfxType}{$utils._text_wrap}
+        white-space normal $sfxImportant
+
+    &{$pfxType}{$utils._text_nowrap}
+        white-space nowrap $sfxImportant
+
+    &{$pfxType}{$utils._text_break}
+        word-break break-word $sfxImportant
+        overflow-wrap break-word $sfxImportant
+
+    &{$pfxType}{$utils._text_shadow}
+        text-shadow()
+
+        &{$pfxType}0
+            text-shadow 0 $sfxImportant
+
+
+    &{$pfxType}{$utils._text_heading}
+        for head in $lstHeading
+            &{$pfxType}{head}
+                font-size $font-size-lead-base + ( $coef-sm / head * $coef-heading )
+                line-height $line-height-heading-base
+                font-weight $font-weight-light
+
+
+    for point in $breakpoints--min
+        +media-breakpoint-up( point )
+            &{$pfxType}{$utils._text_heading}
+                for head in $lstHeading
+                    &{$pfxType}{head}{$pfxMod}{point}
+                        font-size $font-size-lead-base + ( $coef-sm / head * $coef-heading )
+                        line-height $line-height-heading-base
+                        font-weight $font-weight-light
+
+

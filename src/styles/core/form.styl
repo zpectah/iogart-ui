@@ -1,0 +1,114 @@
+label
+    padding-bottom $spacer
+    display inline-flex
+
+.{$core.form}
+    &{$pfxType}{$core._form_plain-text}
+        form-input-base()
+
+    &{$pfxType}{$core._form_input}
+        form-input-base()
+        display block
+        background-color $white
+        background-clip padding-box
+        border 1px $border-default-style
+
+        &[type="date"],
+        &[type="time"],
+        &[type="datetime-local"],
+        &[type="month"]
+            appearance none
+
+        select&
+            appearance none
+
+            &:not([multiple])
+                background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTEyIDUuODNMMTUuMTcgOWwxLjQxLTEuNDFMMTIgMyA3LjQxIDcuNTkgOC44MyA5IDEyIDUuODN6bTAgMTIuMzRMOC44MyAxNWwtMS40MSAxLjQxTDEyIDIxbDQuNTktNC41OUwxNS4xNyAxNSAxMiAxOC4xN3oiLz48L3N2Zz4=')
+                background-repeat no-repeat
+                background-position calc(100% - 1em) center
+
+        &[type="file"]
+            background-color $grey-1
+
+        button-sizes()
+
+        &::placeholder
+            color $grey-5
+
+        &:disabled,
+        &[disabled],
+        &[readonly]
+            background-color rgba($grey-2, .7)
+            border-color $grey-3
+            opacity 1
+
+        &:hover
+            color $dark
+            border-color darken( $light, 10 )
+
+        &:focus
+            border-color darken( $light, 25 )
+
+        &:disabled,
+        &[disabled]
+            color $grey-5
+
+        &.is
+            &-success
+                input-context( $green )
+
+            &-error
+                input-context( $red )
+
+    &{$pfxType}{$core._form_label}
+        form-label-base()
+
+    &{$pfxType}{$core._form_text}
+        form-text-base()
+
+    &{$pfxType}{$core._form_check},
+    &{$pfxType}{$core._form_radio}
+        width auto
+        height auto
+        min-height ( $spacer * 2.125 )
+        /* margin 0 */
+        padding $spacer  ( $spacer * 1.5 )  $spacer 0
+        display flex
+        align-items center
+        justify-content flex-start
+
+        &{$pfxType}{$core._form_input}
+            width ( $spacer * 1.5 )
+            height ( $spacer * 1.5 )
+            margin 0 .5rem 0 0
+            padding 0
+            display block
+
+        &{$pfxType}{$core._form_label}
+            font-size 1rem
+            font-weight $font-weight-base
+            padding-bottom 0
+
+            [disabled] ~ &
+                opacity .75
+
+            .is-success ~ &
+                color $green
+
+            .is-error ~ &
+                color $red
+
+    &{$pfxType}{$core._form_group}
+        padding-bottom $spacer
+
+    &{$pfxType}{$core._form_inline}
+        width auto
+        max-width 100%
+        display inline-flex
+
+        & > *
+            width auto
+
+        & > .button
+            margin 0
+

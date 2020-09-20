@@ -1,0 +1,81 @@
+color-accents-link()
+    for key, obj in $color-context
+        _t = obj.txt
+        _b = obj.base
+        &.{key}
+            color _t
+            background-color _b
+            transition background-color $anim_duration_base ease-in-out 0s, color $anim_duration_base ease-in-out 0s
+            border 1px solid darken( _b, 5 )
+
+            &.is-disabled
+                color _t
+                background-color rgba( _b, .75 )
+
+            &.outline
+                color _b
+                background-color transparent
+
+
+        &.{key}:hover,
+        &.{key}:focus
+            color _t
+            background-color darken( _b, 7.5 )
+
+            &.outline
+                color _b
+                background-color rgba( _b, .15 )
+
+        &.{key}:focus
+            box-shadow 0 0 .125rem .05rem rgba( _b, .25 )
+            &:hover
+                color _t
+                background-color darken( _b, 10 )
+
+
+        {block}
+
+
+color-accents-block()
+    for key, obj in $color-context
+        _t = obj.txt
+        _b = obj.base
+        &.{key}
+            color _t
+            background-color _b
+            border-color darken( _b, 5 )
+
+            &.is-disabled
+                color _t
+                background-color rgba( _b, .75 )
+
+        {block}
+
+
+
+color-accents-card()
+    for key, obj in $color-context
+        _t = obj.txt
+        _b = obj.base
+        &.{key}
+            color _t
+            background-color _b
+            border-color darken( _b, 5 )
+
+            .card
+                &-heading,
+                &-footer
+                    border-color darken( _b, 5 )
+
+        {block}
+
+
+color-accents-callout()
+    for key, obj in $color-context
+        _t = obj.txt
+        _b = obj.base
+        &.{key}
+            border-left-color darken( _b, 1 )
+
+        {block}
+

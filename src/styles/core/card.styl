@@ -1,0 +1,38 @@
+.{$core.card}
+    display flex
+    flex-direction column
+    border 1px $border-default-style
+
+    &{$pfxType}{$core._card_title}
+        padding-left $spacer
+        padding-right $spacer
+
+    &{$pfxType}{$core._card_heading},
+    &{$pfxType}{$core._card_body},
+    &{$pfxType}{$core._card_footer}
+        width 100%
+        height auto
+        padding $spacer
+
+    &{$pfxType}{$core._card_heading}
+        display flex
+        align-items center
+        justify-content space-between
+        background-color rgba( $black, .025 )
+        border-bottom 1px $border-default-style
+
+        .card-title
+            padding-bottom 0
+
+    &{$pfxType}{$core._card_body}
+        flex 1 1 auto
+
+    &{$pfxType}{$core._card_footer}
+        border-top 1px $border-default-style
+
+    & .{$core.list-group}
+        margin-bottom 0
+
+    /* Color accents */
+    color-accents-card()
+

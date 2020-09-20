@@ -1,0 +1,167 @@
+/*
+Typography definitions
+*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+    margin 0
+    padding 0 0 $spacer 0
+    line-height $line-height-base
+    font-weight $font-weight-bold
+
+h1, .h1
+    font-size $font-size-h1
+
+h2, .h2
+    font-size $font-size-h2
+
+h3, .h3
+    font-size $font-size-h3
+
+h4, .h4
+    font-size $font-size-h4
+
+h5, .h5
+    font-size $font-size-h5
+
+h6, .h6
+    font-size $font-size-p-base
+
+p, .p
+    padding 0 0 $spacer 0
+    font-size $font-size-p-base
+    line-height $line-height-base
+
+.p
+    padding-bottom ( $spacer * 2 )
+
+blockquote, .blockquote, q, .q
+    quotes none
+
+    &:before,
+    &:after,
+        content ''
+            content none
+
+    & .credits
+        padding $spacer 0 0 0
+        text-muted()
+
+small, .small
+    font-size $font-size--sm
+
+address, .address
+    line-height $line-height-base
+
+pre, .pre, samp, .samp, code, .code, kbd, .kbd
+    font-family $font-family--monospace
+
+samp, .samp
+    /* */
+
+code, .code
+    font-size .9rem
+    word-break normal
+    color $secondary
+
+pre, .pre
+    display block
+    font-size .9rem
+
+    code, .code
+        color inherit
+
+var, .var
+    /* */
+
+kbd, .kbd
+    badge()
+    padding .15em .25em
+    font-size 85%
+    color $light
+    background-color $secondary
+
+a, .a
+    background-color transparent
+
+abbr[title],
+abbr[data-original-title]
+    text-decoration underline
+    text-decoration-style dotted
+    cursor help
+    border-bottom 0
+    text-decoration-skip-ink none
+
+mark, .mark
+    background-color rgba($primary, .125)
+
+sub, sup,
+.sub, .sup
+    font-size 75%
+    line-height 0
+    position relative
+    vertical-align baseline
+
+sub
+    bottom -0.25em
+
+
+sup
+    top -0.5em
+
+
+/*
+Text lead
+*/
+.lead
+    font-size $font-size-lead-base
+    font-weight $font-weight-light
+    line-height $line-height--lg
+
+
+/*
+Default list & data list
+*/
+ul, ol
+    margin 0 0 $spacer ($spacer * 1.75)
+    padding 0
+
+    li
+        margin 0 0 ($spacer / 2) 0
+        padding 0
+        line-height $line-height-base
+        display list-item
+
+        ul, ol
+            margin-bottom 0
+
+dl
+    margin 0 0 $spacer 0
+    padding 0
+
+    dt
+    dd
+        margin 0 0 ($spacer / 2) 0
+        padding 0
+        line-height $line-height-base
+
+    dt
+        font-weight $font-weight-bold
+
+
+/*
+Default table
+*/
+table
+    width auto
+    min-width 100%
+    margin 0 0 $spacer 0
+    table-reset()
+
+    tr
+        th, td
+            padding ($spacer / 2) 0
+            text-align left
+
+caption
+    caption()
+

@@ -1,0 +1,23 @@
+hr
+    height 0
+    box-sizing content-box
+    overflow visible
+
+.{$core.line}
+    margin $spacer_lg auto
+    border 0
+    border-top 1px $border-default-style
+
+    &.solid
+        border-style solid
+
+    &.dashed
+        border-style dashed
+
+    &.dotted
+        border-style dotted
+
+    &.double
+        height 2px
+        border-bottom 1px $border-default-style
+

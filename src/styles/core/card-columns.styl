@@ -1,0 +1,22 @@
+.{$core.card-columns}
+    column-count 1
+    column-gap $spacer
+    orphans 1
+    widows 1
+
+    +media-breakpoint-up( MD )
+        column-count 2
+
+    +media-breakpoint-up( LG )
+        column-count 3
+
+    +media-breakpoint-up( XXL )
+        column-count 4
+
+    & > .{$core.card}
+        width 100%
+        margin-bottom $spacer
+        display inline-flex
+
+
+

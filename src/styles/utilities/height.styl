@@ -1,0 +1,125 @@
+/*
+Height
+*/
+
+.{$utils.height}
+    for num in $lstRems
+        &{$pfxType}{num}
+            height num*1rem $sfxImportant
+
+    for num in $lstPercs
+        &{$pfxType}{num}{$sfxPcnt}
+            height num*1% $sfxImportant
+
+
+/*
+Min Height
+*/
+
+.{$utils.min-height}
+    for num in $lstRems
+        &{$pfxType}{num}
+            min-height num*1rem $sfxImportant
+
+    for num in $lstPercs
+        &{$pfxType}{num}{$sfxPcnt}
+            min-height num*1% $sfxImportant
+
+
+/*
+Max Height
+*/
+
+.{$utils.max-height}
+    for num in $lstRems
+        &{$pfxType}{num}
+            max-height num*1rem $sfxImportant
+
+    for num in $lstPercs
+        &{$pfxType}{num}{$sfxPcnt}
+            max-height num*1% $sfxImportant
+
+
+/*
+Viewport height
+*/
+
+.{$utils.viewport-height}
+    for num in $lstPercs
+        &{$pfxType}{num}
+            height num*1vh $sfxImportant
+
+
+
+/*
+Viewport min height
+*/
+
+.{$utils.min-viewport-height}
+    for num in $lstPercs
+        &{$pfxType}{num}
+            min-height num*1vh $sfxImportant
+
+
+/*
+Viewport max height
+*/
+
+.{$utils.max-viewport-height}
+    for num in $lstPercs
+        &{$pfxType}{num}
+            max-height num*1vh $sfxImportant
+
+
+if $height-use-responsive-prefixes
+    for point in $breakpoints--min
+        +media-breakpoint-up( point )
+
+            .{$utils.height}
+                for num in $lstRems
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        height num*1rem $sfxImportant
+
+                for num in $lstPercs
+                    &{$pfxType}{num}{$sfxPcnt}{$pfxMod}{point}
+                        height num*1% $sfxImportant
+
+
+            .{$utils.min-height}
+                for num in $lstRems
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        min-height num*1rem $sfxImportant
+
+                for num in $lstPercs
+                    &{$pfxType}{num}{$sfxPcnt}{$pfxMod}{point}
+                        min-height num*1% $sfxImportant
+
+
+            .{$utils.max-height}
+                for num in $lstRems
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        max-height num*1rem $sfxImportant
+
+                for num in $lstPercs
+                    &{$pfxType}{num}{$sfxPcnt}{$pfxMod}{point}
+                        max-height num*1% $sfxImportant
+
+
+            .{$utils.viewport-height}
+                for num in $lstPercs
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        height num*1vh $sfxImportant
+
+
+            .{$utils.min-viewport-height}
+                for num in $lstPercs
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        min-height num*1vh $sfxImportant
+
+
+            .{$utils.max-viewport-height}
+                for num in $lstPercs
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        max-height num*1vh $sfxImportant
+
+

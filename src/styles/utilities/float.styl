@@ -1,0 +1,27 @@
+/*
+Float
+*/
+
+.{$utils.float}
+    &{$pfxType}left
+        float-left()
+
+    &{$pfxType}right
+        float-right()
+
+    &{$pfxType}none
+        float-none()
+
+
+for point in $breakpoints--min
+    +media-breakpoint-up( point )
+        .{$utils.float}
+            &{$pfxType}left{$pfxMod}{point}
+                float-left()
+
+            &{$pfxType}right{$pfxMod}{point}
+                float-right()
+
+            &{$pfxType}none{$pfxMod}{point}
+                float-none()
+

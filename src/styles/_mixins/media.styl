@@ -1,0 +1,85 @@
+media-breakpoint-up( breakpoint )
+    if breakpoint == 'XS'
+        @media $media-screen-and-up--XS
+            {block}
+
+    if breakpoint == 'SM'
+        @media $media-screen-and-up--SM
+            {block}
+
+    if breakpoint == 'MD'
+        @media $media-screen-and-up--MD
+            {block}
+
+    if breakpoint == 'LG'
+        @media $media-screen-and-up--LG
+            {block}
+
+    if breakpoint == 'XL'
+        @media $media-screen-and-up--XL
+            {block}
+
+    if breakpoint == 'XXL'
+        @media $media-screen-and-up--XXL
+            {block}
+
+
+media-breakpoint-down( breakpoint )
+    if breakpoint == 'XS'
+        @media $media-screen-and-down--XS
+            {block}
+
+    if breakpoint == 'SM'
+        @media $media-screen-and-down--SM
+            {block}
+
+    if breakpoint == 'MD'
+        @media $media-screen-and-down--MD
+            {block}
+
+    if breakpoint == 'LG'
+        @media $media-screen-and-down--LG
+            {block}
+
+    if breakpoint == 'XL'
+        @media $media-screen-and-down--XL
+            {block}
+
+    if breakpoint == 'XXL'
+        @media $media-screen-and-down--XXL
+            {block}
+
+
+media-breakpoint-only( breakpoint )
+    if breakpoint == 'XS'
+        @media $media-screen-and-only--XS
+            {block}
+
+    if breakpoint == 'SM'
+        @media $media-screen-and-only--SM
+            {block}
+
+    if breakpoint == 'MD'
+        @media $media-screen-and-only--MD
+            {block}
+
+    if breakpoint == 'LG'
+        @media $media-screen-and-only--LG
+            {block}
+
+    if breakpoint == 'XL'
+        @media $media-screen-and-only--XL
+            {block}
+
+    if breakpoint == 'XXL'
+        @media $media-screen-and-only--XXL
+            {block}
+
+
+/* TODO: media-breakpoint-between ??? */
+
+media-print-only()
+    @media print
+        {block}
+
+

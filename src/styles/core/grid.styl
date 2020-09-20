@@ -1,0 +1,104 @@
+/*
+Grid container
+*/
+
+.{$core.grid}
+    create_grid-container()
+
+    for key, val in $grid-container-width
+        +media-breakpoint-up( key )
+            max-width val*1px
+
+    &{$pfxType}{$context.fluid}
+        create_grid-container()
+
+
+/*
+Grid row
+*/
+
+.{$core.grid-row}
+    create_grid-row()
+
+    & > .col,
+    & > [class^={$core.grid-column}{$pfxType}]
+        create_grid-col-ready()
+
+&.no-gutters
+    grid-row-no-gutter()
+
+    > .col,
+    > [class*="col-"]
+        grid-col-no-gutter()
+
+
+/*
+Grid column
+*/
+
+.{$core.grid-column}
+    create_grid-col-base()
+
+    &{$pfxType}auto
+        create_grid-col-auto()
+
+    for num in ($grid-columns..1)
+        &{$pfxType}{num}
+            create_grid-col( num )
+
+
+/*
+Grid column offset
+*/
+
+.{$core.grid-offset}
+    for num in ($grid-columns..1)
+        &{$pfxType}{num}
+            grid-col-offset( num )
+
+
+/*
+Grid column order
+*/
+
+.{$core.grid-order}
+    &{$pfxType}{$context.first}
+        order -1 !important
+
+    &{$pfxType}{$context.last}
+        order ($grid-columns + 1) $sfxImportant
+
+    for num in ($grid-columns..1)
+        &{$pfxType}{num}
+            grid-col-order( num )
+
+
+
+for point in $breakpoints--min
+    +media-breakpoint-up( point )
+        .{$core.grid-column}
+            &{$pfxType}auto{$pfxMod}{point}
+                create_grid-col-auto()
+
+            for num in ($grid-columns..1)
+                &{$pfxType}{num}{$pfxMod}{point}
+                    create_grid-col( num )
+
+
+        .{$core.grid-offset}
+            for num in ($grid-columns..1)
+                &{$pfxType}{num}{$pfxMod}{point}
+                    grid-col-offset( num )
+
+
+        .{$core.grid-order}
+            &{$pfxType}{$context.first}{$pfxMod}{point}
+                order -1 !important
+
+            &{$pfxType}{$context.last}{$pfxMod}{point}
+                order ($grid-columns + 1) $sfxImportant
+
+            for num in ($grid-columns..1)
+                &{$pfxType}{num}{$pfxMod}{point}
+                    grid-col-order( num )
+

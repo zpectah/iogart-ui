@@ -1,0 +1,33 @@
+{
+  "name": "iogart-ui",
+  "version": "1.0.0",
+  "description": "CSS toolkit for easy web app development",
+  "main": "src/styles/index.styl",
+  "scripts": {
+    "postinstall": "echo 'Updating build folder' && gulp dev",
+    "build": "echo 'Creating new build' && gulp dev"
+  },
+  "keywords": [
+    "web",
+    "development",
+    "stylus",
+    "css"
+  ],
+  "author": "Tomas Sychra | zpecter.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "@babel/runtime": "^7.11.2",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylus": "^2.7.0"
+  }
+}

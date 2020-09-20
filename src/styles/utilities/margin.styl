@@ -1,0 +1,244 @@
+/*
+Margin
+*/
+
+.{$utils.margin}
+    &{$pfxType}auto
+        margin auto $sfxImportant
+
+    &{$pfxType}0
+        margin 0 $sfxImportant
+
+    for num in $lstRems
+        &{$pfxType}{num}
+            margin num*1rem $sfxImportant
+
+        &{$pfxType}{num}{$sfxNeg}
+            margin num * -1rem $sfxImportant
+
+
+    &{$pfxType}{$context.x-axis}
+        &{$pfxType}auto
+            margin-left auto $sfxImportant
+            margin-right auto $sfxImportant
+
+        &{$pfxType}0
+            margin-left 0 $sfxImportant
+            margin-right 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                margin-left num*1rem $sfxImportant
+                margin-right num*1rem $sfxImportant
+
+            &{$pfxType}{num}{$sfxNeg}
+                margin-left num * -1rem $sfxImportant
+                margin-right num * -1rem $sfxImportant
+
+
+    &{$pfxType}{$context.y-axis}
+        &{$pfxType}auto
+            margin-top auto $sfxImportant
+            margin-bottom auto $sfxImportant
+
+        &{$pfxType}0
+            margin-top 0 $sfxImportant
+            margin-bottom 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                margin-top num*1rem $sfxImportant
+                margin-bottom num*1rem $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}{$sfxNeg}
+                margin-top num * -1rem $sfxImportant
+                margin-bottom num * -1rem $sfxImportant
+
+
+    &{$pfxType}{$context.top}
+        &{$pfxType}auto
+            margin-top auto $sfxImportant
+
+        &{$pfxType}0
+            margin-top 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                margin-top num*1rem $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}{$sfxNeg}
+                margin-top num * -1rem $sfxImportant
+
+
+    &{$pfxType}{$context.right}
+        &{$pfxType}auto
+            margin-right auto $sfxImportant
+
+        &{$pfxType}0
+            margin-right 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                margin-right num*1rem $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}{$sfxNeg}
+                margin-right num * -1rem $sfxImportant
+
+
+    &{$pfxType}{$context.bottom}
+        &{$pfxType}auto
+            margin-bottom auto $sfxImportant
+
+        &{$pfxType}0
+            margin-bottom 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                margin-bottom num*1rem $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}{$sfxNeg}
+                margin-bottom num * -1rem $sfxImportant
+
+
+    &{$pfxType}{$context.left}
+        &{$pfxType}auto
+            margin-left auto $sfxImportant
+
+        &{$pfxType}0
+            margin-left 0 $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}
+                margin-left num*1rem $sfxImportant
+
+        for num in $lstRems
+            &{$pfxType}{num}{$sfxNeg}
+                margin-left num * -1rem $sfxImportant
+
+
+if $margin-use-responsive-prefixes
+    for point in $breakpoints--min
+        +media-breakpoint-up( point )
+            .{$utils.margin}
+
+                &{$pfxType}auto{$pfxMod}{point}
+                    margin auto $sfxImportant
+
+                &{$pfxType}0{$pfxMod}{point}
+                     margin 0 $sfxImportant
+
+                for num in $lstRems
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        margin num*1rem $sfxImportant
+
+                    &{$pfxType}{num}{$sfxNeg}{$pfxMod}{point}
+                        margin num * -1rem $sfxImportant
+
+
+                &{$pfxType}{$context.x-axis}
+                    &{$pfxType}auto{$pfxMod}{point}
+                        margin-left auto $sfxImportant
+                        margin-right auto $sfxImportant
+
+                    &{$pfxType}0{$pfxMod}{point}
+                         margin-left 0 $sfxImportant
+                         margin-right 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            margin-left num*1rem $sfxImportant
+                            margin-right num*1rem $sfxImportant
+
+                        &{$pfxType}{num}{$sfxNeg}{$pfxMod}{point}
+                            margin-left num * -1rem $sfxImportant
+                            margin-right num * -1rem $sfxImportant
+
+
+                &{$pfxType}{$context.y-axis}
+                    &{$pfxType}auto{$pfxMod}{point}
+                        margin-top auto $sfxImportant
+                        margin-bottom auto $sfxImportant
+
+                    &{$pfxType}0{$pfxMod}{point}
+                         margin-top 0 $sfxImportant
+                         margin-bottom 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            margin-top num*1rem $sfxImportant
+                            margin-bottom num*1rem $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$sfxNeg}{$pfxMod}{point}
+                            margin-top num * -1rem $sfxImportant
+                            margin-bottom num * -1rem $sfxImportant
+
+
+                &{$pfxType}{$context.top}
+                    &{$pfxType}auto{$pfxMod}{point}
+                        margin-top auto $sfxImportant
+
+                    &{$pfxType}0{$pfxMod}{point}
+                         margin-top 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            margin-top num*1rem $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$sfxNeg}{$pfxMod}{point}
+                            margin-top num * -1rem $sfxImportant
+
+
+                &{$pfxType}{$context.right}
+                    &{$pfxType}auto{$pfxMod}{point}
+                        margin-right auto $sfxImportant
+
+                    &{$pfxType}0{$pfxMod}{point}
+                         margin-right 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            margin-right num*1rem $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$sfxNeg}{$pfxMod}{point}
+                            margin-right num * -1rem $sfxImportant
+
+
+                &{$pfxType}{$context.bottom}
+                    &{$pfxType}auto{$pfxMod}{point}
+                        margin-bottom auto $sfxImportant
+
+                    &{$pfxType}0{$pfxMod}{point}
+                         margin-bottom 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            margin-bottom num*1rem $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$sfxNeg}{$pfxMod}{point}
+                            margin-bottom num * -1rem $sfxImportant
+
+
+                &{$pfxType}{$context.left}
+                    &{$pfxType}auto{$pfxMod}{point}
+                        margin-left auto $sfxImportant
+
+                    &{$pfxType}0{$pfxMod}{point}
+                         margin-left 0 $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$pfxMod}{point}
+                            margin-left num*1rem $sfxImportant
+
+                    for num in $lstRems
+                        &{$pfxType}{num}{$sfxNeg}{$pfxMod}{point}
+                            margin-left num * -1rem $sfxImportant
+
+

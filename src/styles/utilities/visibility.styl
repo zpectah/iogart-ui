@@ -1,0 +1,17 @@
+/*
+Visible
+*/
+.{$utils.visible}
+    visibility visible $sfxImportant
+
+.{$utils.invisible}
+    visibility hidden $sfxImportant
+
+for point in $breakpoints--min
+    +media-breakpoint-up( point )
+        .{$utils.visible}{$pfxMod}{point}
+            visibility visible $sfxImportant
+
+        .{$utils.invisible}{$pfxMod}{point}
+            visibility hidden $sfxImportant
+

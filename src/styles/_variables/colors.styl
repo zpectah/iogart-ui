@@ -1,0 +1,146 @@
+/*
+Colors definitions
+*/
+/* Source: https://www.materialui.co/colors */
+colors = {
+    brand: rgb(173,20,87),
+    white: rgb(254,254,254),
+    grey-1: rgb(245,245,245),
+    grey-2: rgb(238,238,238),
+    grey-3: rgb(224,224,224),
+    grey-4: rgb(189,189,189),
+    grey-5: rgb(158,158,158),
+    grey-6: rgb(117,117,117),
+    grey-7: rgb(97,97,97),
+    grey-8: rgb(66,66,66),
+    grey-9: rgb(33,33,33),
+    black: rgb(5,5,5),
+
+    red: rgb(244,67,54),
+    pink: rgb(233,30,99),
+    purple: rgb(156,39,176),
+    deep-purple: rgb(103,58,183),
+    indigo: rgb(63,81,181),
+    blue:  rgb(33,150,243),
+    light-blue: rgb(3,169,244),
+    cyan: rgb(0,188,212),
+    teal: rgb(0,150,136),
+    green: rgb(76,175,80),
+    light-green: rgb(139,195,74),
+    lime: rgb(205,220,57),
+    yellow: rgb(255,235,59),
+    amber: rgb(255,193,7),
+    orange: rgb(255,152,0),
+    deep-orange: rgb(255,87,34),
+    brown: rgb(121,85,72),
+    grey: rgb(158,158,158),
+    blue-grey: rgb(96,125,139),
+}
+
+/*
+Color variables
+*/
+$white = colors.white
+$grey-1 = colors.grey-1
+$grey-2 = colors.grey-2
+$grey-3 = colors.grey-3
+$grey-4 = colors.grey-4
+$grey-5 = colors.grey-5
+$grey-6 = colors.grey-6
+$grey-7 = colors.grey-7
+$grey-8 = colors.grey-8
+$grey-9 = colors.grey-9
+$black = colors.black
+$red = colors.red
+$pink = colors.pink
+$purple = colors.purple
+$deep-purple = colors.deep-purple
+$indigo = colors.indigo
+$blue = colors.blue
+$light-blue = colors.light-blue
+$cyan = colors.cyan
+$teal = colors.teal
+$green = colors.green
+$light-green = colors.light-green
+$lime = colors.lime
+$yellow = colors.yellow
+$amber = colors.amber
+$orange = colors.orange
+$deep-orange = colors.deep-orange
+$brown = colors.brown
+$grey = colors.grey
+$blue-grey = colors.blue-grey
+
+/*
+UI color variables
+*/
+$brand = colors.brand
+$primary = $purple
+$secondary = $grey-9
+$success = $green
+$danger = $red
+$warning = $amber
+$info  = $light-blue
+$light = $grey-2
+$dark = $grey-8
+
+/*
+Context blocks
+*/
+$color-context = {
+    default: {
+        base: $dark,
+        txt: $light,
+        grad: $black
+    },
+    primary: {
+        base: $primary,
+        txt: $grey-1,
+        grad: $purple
+    },
+    secondary: {
+        base: $secondary,
+        txt: $grey-1,
+        grad: $black
+    },
+    success: {
+        base: $success,
+        txt: $grey-1,
+        grad: $light-green
+    },
+    danger: {
+        base: $danger,
+        txt: $grey-1,
+        grad: $orange
+    },
+    warning: {
+        base: $warning,
+        txt: $grey-9,
+        grad: $deep-orange
+    },
+    info: {
+        base: $info,
+        txt: $grey-1,
+        grad: $blue
+    },
+    light: {
+        base: $light,
+        txt: $dark,
+        grad: $grey-2
+    },
+    dark: {
+        base: $dark,
+        txt: $light,
+        grad: $black
+    },
+}
+
+/*
+Color context for active item class
+*/
+$color-active = $brand
+
+/*
+Degree for gradient background
+*/
+$gradient-degree-base = 45deg

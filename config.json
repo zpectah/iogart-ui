@@ -1,0 +1,7 @@
+{
+    "CREATE_SOURCEMAPS": false,
+    "PATH": {
+        "SRC": "./src/",
+        "DIST": "./dist/"
+    }
+}

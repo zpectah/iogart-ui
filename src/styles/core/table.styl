@@ -1,0 +1,91 @@
+.{$core.table}
+    width 100%
+    height auto
+    margin 0 0 $spacer 0
+    border-top 1px $border-default-style
+
+    thead,
+    tbody,
+    tfoot
+        tr
+            th,
+            td
+                padding $spacer $spacer
+                font-size 1rem
+                border-bottom 1px $border-default-style
+
+                &.{$status.disabled}
+                    text-muted()
+
+                /* Accents */
+                color-accents-block()
+
+            th
+                font-weight 600
+
+
+            &.{$status.disabled} th,
+            &.{$status.disabled} td
+                text-muted()
+
+
+            for key, obj in $color-context
+                &.{key} th,
+                &.{key} td
+                    color obj.txt
+                    background-color obj.base
+                    border-color darken( obj.base, 5 )
+
+    thead
+        tr
+            td,
+            th
+                text-align center
+                vertical-align middle
+
+                &:first-child
+                    text-align right
+
+            &:first-child
+                td,
+                th
+                    border-top 1px $border-default-style
+
+            &:last-child
+                td,
+                th
+                    border-bottom 2px $border-default-style
+
+    tbody
+        tr
+            td,
+            th
+                text-align center
+                vertical-align middle
+
+                &:first-child
+                    text-align right
+
+    tfoot
+        tr
+            td,
+            th
+                text-align center
+                vertical-align middle
+
+            &:last-child
+                td,
+                th
+                    border-bottom 0
+
+    &{$pfxType}{$core._table_responsive}
+        width 100%
+        height auto
+        padding-bottom 1rem
+        overflow-y hidden
+        overflow-x auto
+
+        .{$core.table}
+            min-width 50rem
+            position relative
+

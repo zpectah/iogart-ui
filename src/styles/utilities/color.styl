@@ -1,0 +1,9 @@
+/*
+Color
+*/
+
+.{$utils.color}
+    for key, obj in $color-context
+        &{$pfxType}{key}
+            color obj.base
+

@@ -1,0 +1,14 @@
+.{$core.card-group}
+    display flex
+    flex-flow row wrap
+
+    & > .{$core.card}
+        min-width 100%
+
+        +media-breakpoint-up( MD )
+            min-width initial
+            flex 1 0 0
+
+    & > .{$core.card} + .{$core.card}
+        +media-breakpoint-up( MD )
+            border-left-color transparent

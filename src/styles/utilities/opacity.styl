@@ -1,0 +1,15 @@
+/*
+Opacity
+*/
+
+.{$utils.opacity}
+    &{$pfxType}0
+        opacity 0 $sfxImportant
+
+    for point in $lstOpacity
+        &{$pfxType}{point}
+            opacity (point/10) $sfxImportant
+
+    &{$pfxType}10
+         opacity 1 $sfxImportant
+

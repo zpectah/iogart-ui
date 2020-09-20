@@ -1,0 +1,52 @@
+form-input-base()
+    width 100%
+    min-height ( $spacer * 2.125 )
+    margin 0
+    padding $spacer  ( $spacer * 1.5 )
+    display block
+    vertical-align middle
+    font-family $font-family--monospace
+    font-size 1rem
+    font-weight $font-weight-base
+    line-height $line-height-base
+    box-sizing border-box
+    color $grey-7
+
+
+form-label-base()
+    width 100%
+    min-height ( $spacer * 2.125 )
+    margin 0
+    padding $spacer $spacer $spacer 0
+    display flex
+    vertical-align middle
+    font-size 1rem
+    font-weight $font-weight-bold
+    line-height $line-height-base
+    box-sizing border-box
+    color $grey-8
+
+
+form-text-base()
+    width 100%
+    min-height ( $spacer * 2.125 )
+    margin 0
+    padding $spacer 0
+    display flex
+    vertical-align middle
+    font-weight $font-weight-base
+    line-height $line-height-base
+    box-sizing border-box
+    color $grey-7
+
+    small&
+        font-weight $font-weight-light
+
+
+input-context( color )
+    color color
+    border-color color
+    &:hover
+        color darken( color, 10 )
+
+

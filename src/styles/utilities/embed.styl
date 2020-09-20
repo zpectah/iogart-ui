@@ -1,0 +1,8 @@
+.{$utils.embed}
+    &{$pfxType}responsive
+        embed-responsive()
+
+        for key, ratio in $embed-ratios
+            &.{$utils._embed_ratio}{$pfxType}{key}::before
+                padding-top percentage( ratio.y / ratio.x )
+

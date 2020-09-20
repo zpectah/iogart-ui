@@ -1,0 +1,56 @@
+.{$core.list-group}
+    list-group()
+
+    &{$pfxType}{$core._list-group_item}
+        list-group-item()
+
+        &.{$status.active}
+            color $grey-1
+            background-color $primary
+            border-color darken( $primary, 5 )
+
+        &.{$status.disabled}
+            text-muted()
+
+        /* Accents */
+        color-accents-block()
+
+
+    &{$pfxType}{$core._list-group_link}
+        list-group-item()
+
+        text-decoration none
+        color $dark
+
+        &.{$status.active}
+            color $grey-1
+            background-color $primary
+            border-color darken( $primary, 5 )
+
+        &.{$status.disabled}
+            text-muted()
+
+        &:hover,
+        &:focus
+            text-decoration none
+            color inherit
+            background-color $light
+
+            &.is-active
+                color $grey-1
+                background-color $primary
+
+        /* Accents */
+        color-accents-link()
+
+
+    /* context */
+    &.{$core._list-group_flush}
+        /* */
+
+
+    &.{$core._list-group_horizontal}
+        flex-flow row
+        flex-wrap wrap
+
+

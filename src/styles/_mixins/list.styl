@@ -1,0 +1,43 @@
+list-group()
+    margin 0 0 $spacer 0
+    padding 0
+    list-style none
+    display flex
+    flex-flow column
+
+
+list-group-item()
+    width auto
+    max-width 100%
+    height auto
+    margin 0
+    padding $spacer $spacer
+    line-height $line-height-base
+    display flex
+    flex-direction row
+    justify-content space-between
+    flex 1 1 auto
+    text-align left
+    text-decoration none
+    border 1px $border-default-style
+
+    & + &
+        border-top 0
+
+    & .list-group
+        margin-top $spacer
+
+    .list-group.flush &
+        border 0
+        border-bottom 1px $border-default-style
+
+        &:last-child
+            border-bottom 0
+
+    .list-group.horizontal &
+        text-align center
+        border 1px $border-default-style
+
+        & + &
+            border-left 0
+

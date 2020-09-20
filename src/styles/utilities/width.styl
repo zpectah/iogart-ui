@@ -1,0 +1,124 @@
+/*
+Width
+*/
+
+.{$utils.width}
+    for num in $lstRems
+        &{$pfxType}{num}
+            width num*1rem $sfxImportant
+
+    for num in $lstPercs
+        &{$pfxType}{num}{$sfxPcnt}
+            width num*1% $sfxImportant
+
+
+/*
+Min Width
+*/
+
+.{$utils.min-width}
+    for num in $lstRems
+        &{$pfxType}{num}
+            min-width num*1rem $sfxImportant
+
+    for num in $lstPercs
+        &{$pfxType}{num}{$sfxPcnt}
+            min-width num*1% $sfxImportant
+
+
+/*
+Max Width
+*/
+
+.{$utils.max-width}
+    for num in $lstRems
+        &{$pfxType}{num}
+            max-width num*1rem $sfxImportant
+
+    for num in $lstPercs
+        &{$pfxType}{num}{$sfxPcnt}
+            max-width num*1% $sfxImportant
+
+
+/*
+Viewport Width
+*/
+
+.{$utils.viewport-width}
+    for num in $lstPercs
+        &{$pfxType}{num}
+            width num*1vw $sfxImportant
+
+
+/*
+Min Viewport Width
+*/
+
+.{$utils.min-viewport-width}
+    for num in $lstPercs
+        &{$pfxType}{num}
+            min-width num*1vw $sfxImportant
+
+
+/*
+Max Viewport Width
+*/
+
+.{$utils.max-viewport-width}
+    for num in $lstPercs
+        &{$pfxType}{num}
+            max-width num*1vw $sfxImportant
+
+
+if $width-use-responsive-prefixes
+    for point in $breakpoints--min
+        +media-breakpoint-up( point )
+
+            .{$utils.width}
+                for num in $lstRems
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        width num*1rem $sfxImportant
+
+                for num in $lstPercs
+                    &{$pfxType}{num}{$sfxPcnt}{$pfxMod}{point}
+                        width num*1% $sfxImportant
+
+
+            .{$utils.min-width}
+                for num in $lstRems
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        min-width num*1rem $sfxImportant
+
+                for num in $lstPercs
+                    &{$pfxType}{num}{$sfxPcnt}{$pfxMod}{point}
+                        min-width num*1% $sfxImportant
+
+
+            .{$utils.max-width}
+                for num in $lstRems
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        max-width num*1rem $sfxImportant
+
+                for num in $lstPercs
+                    &{$pfxType}{num}{$sfxPcnt}{$pfxMod}{point}
+                        max-width num*1% $sfxImportant
+
+
+            .{$utils.viewport-width}
+                for num in $lstPercs
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        width num*1vw $sfxImportant
+
+
+            .{$utils.min-viewport-width}
+                for num in $lstPercs
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        min-width num*1vw $sfxImportant
+
+
+            .{$utils.max-viewport-width}
+                for num in $lstPercs
+                    &{$pfxType}{num}{$pfxMod}{point}
+                        max-width num*1vw $sfxImportant
+
+

@@ -1,0 +1,27 @@
+/*
+Display
+*/
+
+.{$utils.display}
+    for type in $lstDisplay
+        &{$pfxType}{type}
+            display type $sfxImportant
+
+for point in $breakpoints--min
+    +media-breakpoint-up( point )
+        .{$utils.display}
+            for type in $lstDisplay
+                &{$pfxType}{type}{$pfxMod}{point}
+                    display type $sfxImportant
+
+
+/*
+Print
+*/
+
++media-print-only()
+    .{$utils.print}
+        for type in $lstDisplay
+            &{$pfxType}{type}
+                display type $sfxImportant
+

@@ -1,0 +1,253 @@
+/*
+Flex
+*/
+
+.{$utils.flex}
+    &{$pfxType}row
+        flex-direction row $sfxImportant
+
+    &{$pfxType}column
+        flex-direction column $sfxImportant
+
+    &{$pfxType}row-reverse
+        flex-direction row-reverse $sfxImportant
+
+    &{$pfxType}column-reverse
+        flex-direction column-reverse $sfxImportant
+
+    &{$pfxType}wrap
+        flex-wrap wrap $sfxImportant
+
+    &{$pfxType}nowrap
+        flex-wrap nowrap $sfxImportant
+
+    &{$pfxType}wrap-reverse
+        flex-wrap wrap-reverse $sfxImportant
+
+    &{$pfxType}fill
+        flex 1 1 auto $sfxImportant
+
+    &{$pfxType}grow-0
+        flex-grow 0 $sfxImportant
+
+    &{$pfxType}grow-1
+        flex-grow 1 $sfxImportant
+
+    &{$pfxType}shrink-0
+        flex-shrink 0 $sfxImportant
+
+    &{$pfxType}shrink-1
+        flex-shrink 1 $sfxImportant
+
+
+/*
+Flex + Justify content
+*/
+
+.{$utils._flex_justify-content}
+    &{$pfxType}start
+        justify-content flex-start $sfxImportant
+
+    &{$pfxType}end
+        justify-content flex-end $sfxImportant
+
+    &{$pfxType}center
+        justify-content center $sfxImportant
+
+    &{$pfxType}between
+        justify-content space-between $sfxImportant
+
+    &{$pfxType}around
+        justify-content space-around $sfxImportant
+
+    &{$pfxType}evenly
+        justify-content space-evenly $sfxImportant
+
+
+/*
+Flex + Align items
+*/
+
+.{$utils._flex_align-items}
+    &{$pfxType}start
+        align-items flex-start $sfxImportant
+
+    &{$pfxType}end
+        align-items flex-end $sfxImportant
+
+    &{$pfxType}center
+        align-items center $sfxImportant
+
+    &{$pfxType}baseline
+        align-items baseline $sfxImportant
+
+    &{$pfxType}stretch
+        align-items stretch $sfxImportant
+
+
+/*
+Flex + Align content
+*/
+
+.{$utils._flex_align-content}
+    &{$pfxType}start
+        align-content flex-start $sfxImportant
+
+    &{$pfxType}end
+        align-content flex-end $sfxImportant
+
+    &{$pfxType}center
+        align-content center $sfxImportant
+
+    &{$pfxType}between
+        align-content space-between $sfxImportant
+
+    &{$pfxType}around
+        align-content space-around $sfxImportant
+
+    &{$pfxType}stretch
+        align-content stretch $sfxImportant
+
+
+/*
+Flex + Align self
+*/
+
+.{$utils._flex_align-self}
+    &{$pfxType}auto
+        align-self auto $sfxImportant
+
+    &{$pfxType}start
+        align-self flex-start $sfxImportant
+
+    &{$pfxType}end
+        align-self flex-end $sfxImportant
+
+    &{$pfxType}center
+        align-self center $sfxImportant
+
+    &{$pfxType}baseline
+        align-self baseline $sfxImportant
+
+    &{$pfxType}stretch
+        align-self stretch $sfxImportant
+
+
+for point in $breakpoints--min
+    +media-breakpoint-up( point )
+
+        .{$utils.flex}
+            &{$pfxType}row{$pfxMod}{point}
+                flex-direction row $sfxImportant
+
+            &{$pfxType}column{$pfxMod}{point}
+                flex-direction column $sfxImportant
+
+            &{$pfxType}row-reverse{$pfxMod}{point}
+                flex-direction row-reverse $sfxImportant
+
+            &{$pfxType}column-reverse{$pfxMod}{point}
+                flex-direction column-reverse $sfxImportant
+
+            &{$pfxType}wrap{$pfxMod}{point}
+                flex-wrap wrap $sfxImportant
+
+            &{$pfxType}nowrap{$pfxMod}{point}
+                flex-wrap nowrap $sfxImportant
+
+            &{$pfxType}wrap-reverse{$pfxMod}{point}
+                flex-wrap wrap-reverse $sfxImportant
+
+            &{$pfxType}fill{$pfxMod}{point}
+                flex 1 1 auto $sfxImportant
+
+            &{$pfxType}grow-0{$pfxMod}{point}
+                flex-grow 0 $sfxImportant
+
+            &{$pfxType}grow-1{$pfxMod}{point}
+                flex-grow 1 $sfxImportant
+
+            &{$pfxType}shrink-0{$pfxMod}{point}
+                flex-shrink 0 $sfxImportant
+
+            &{$pfxType}shrink-1{$pfxMod}{point}
+                flex-shrink 1 $sfxImportant
+
+
+        .{$utils._flex_justify-content}
+            &{$pfxType}start{$pfxMod}{point}
+                justify-content flex-start $sfxImportant
+
+            &{$pfxType}end{$pfxMod}{point}
+                justify-content flex-end $sfxImportant
+
+            &{$pfxType}center{$pfxMod}{point}
+                justify-content center $sfxImportant
+
+            &{$pfxType}between{$pfxMod}{point}
+                justify-content space-between $sfxImportant
+
+            &{$pfxType}around{$pfxMod}{point}
+                justify-content space-around $sfxImportant
+
+            &{$pfxType}evenly{$pfxMod}{point}
+                justify-content space-evenly $sfxImportant
+
+
+        .{$utils._flex_align-items}
+            &{$pfxType}start{$pfxMod}{point}
+                align-items flex-start $sfxImportant
+
+            &{$pfxType}end{$pfxMod}{point}
+                align-items flex-end $sfxImportant
+
+            &{$pfxType}center{$pfxMod}{point}
+                align-items center $sfxImportant
+
+            &{$pfxType}baseline{$pfxMod}{point}
+                align-items baseline $sfxImportant
+
+            &{$pfxType}stretch{$pfxMod}{point}
+                align-items stretch $sfxImportant
+
+
+        .{$utils._flex_align-content}
+            &{$pfxType}start{$pfxMod}{point}
+                align-content flex-start $sfxImportant
+
+            &{$pfxType}end{$pfxMod}{point}
+                align-content flex-end $sfxImportant
+
+            &{$pfxType}center{$pfxMod}{point}
+                align-content center $sfxImportant
+
+            &{$pfxType}between{$pfxMod}{point}
+                align-content space-between $sfxImportant
+
+            &{$pfxType}around{$pfxMod}{point}
+                align-content space-around $sfxImportant
+
+            &{$pfxType}stretch{$pfxMod}{point}
+                align-content stretch $sfxImportant
+
+
+        .{$utils._flex_align-self}
+            &{$pfxType}auto{$pfxMod}{point}
+                align-self auto $sfxImportant
+
+            &{$pfxType}start{$pfxMod}{point}
+                align-self flex-start $sfxImportant
+
+            &{$pfxType}end{$pfxMod}{point}
+                align-self flex-end $sfxImportant
+
+            &{$pfxType}center{$pfxMod}{point}
+                align-self center $sfxImportant
+
+            &{$pfxType}baseline{$pfxMod}{point}
+                align-self baseline $sfxImportant
+
+            &{$pfxType}stretch{$pfxMod}{point}
+                align-self stretch $sfxImportant
+
+

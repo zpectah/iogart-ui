@@ -1,0 +1,15 @@
+/*
+Align
+*/
+
+.{$utils.align}
+    for num in $lstAlignVertical
+        &{$pfxType}{num}
+            vertical-align num $sfxImportant
+
+    for point in $breakpoints--min
+        +media-breakpoint-up( point )
+            for num in $lstAlignVertical
+                &{$pfxType}{num}{$pfxMod}{point}
+                    vertical-align num $sfxImportant
+
