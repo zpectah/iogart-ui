@@ -18,7 +18,7 @@ const options = {
 
 export function styles ( cb ) {
     let so, sm;
-    src( cfg.PATH.SRC + 'styles/index.styl' )
+    src( cfg.PATH.SRC + 'index.styl' )
         // TODO .pipe( cfg.CREATE_SOURCEMAPS ? gulpSourceMaps.init( {} ) : true )
         .pipe( gulpStylus( {} ) )
         .pipe( dest( cfg.PATH.DIST ) )
