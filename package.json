@@ -14,7 +14,8 @@
     "css"
   ],
   "author": "Tomas Sychra | zpecter.com",
-  "license": "ISC",
+  "license": "MIT",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
