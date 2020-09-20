@@ -1,67 +1,51 @@
-# Framework CSS/JS
-+ todo ...
+# iogart UI
+!!! Toolkit is still in development, but ready for use !!!
 
 ## Description
+CSS toolkit for easy web app development. See full documentation here ... //TODO
 
-## Requirements
-
-## Dependencies
-
-## Development
+## Development & Custom build
 
 ``$ npm install``
-
-``$ npm run dev``
 
 ``$ npm run build``
 
 
-## Documentation
+## Features
+
+### Core UI:
+- Badge
+- Breadcrumbs
+- Button
+- Callout
+- Card
+- Embed
+- Form
+- Grid
+- Image
+- Figure
+- Line
+- List group
+- Menu
+- Table
+- Typography
+
+### Utilities:
+- Align
+- Border
+- Colors
+- Display
+- Flex
+- Float
+- Opacity
+- Overflow
+- Position
+- Screen reader
+- Shadow
+- Sizing
+- Spacing
+- Text
+- Visibility
 
 
-
-### Layout
-
-#### Grid
-
-
-### Content
-
-#### Typography
-
-
-### Components
-
-#### Alert 
-- (js events)
-
-#### Badge
-#### Breadcrumbs
-#### Button
-#### Button group
-#### Card
-#### Block 
-- (*)
-
-#### Collapse 
-- (js events)
-
-#### Dropdown 
-- (js events)
-
-#### Form
-#### Input group
-#### Jumbo
-#### List
-#### List group
-#### Media
-#### Modal
-- (js events)
-
-#### Nav
-#### Pagination
-#### Toast
-- (js events)
-
-### Utilities
 
