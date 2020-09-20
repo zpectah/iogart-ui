@@ -3353,9 +3353,9 @@ hr {
   text-decoration: none;
   color: #424242;
 }
-.menu > a,
-.menu > span,
-.menu > li {
+.menu a,
+.menu span,
+.menu li {
   margin: 0;
   padding: 0.75rem 0.9375rem;
   display: flex;
@@ -3363,27 +3363,27 @@ hr {
   justify-content: center;
   color: #424242;
 }
-.menu > a:hover,
-.menu > span:hover,
-.menu > li:hover {
+.menu a:hover,
+.menu span:hover,
+.menu li:hover {
   color: #424242;
   background-color: #f5f5f5;
 }
-.menu > a.is-active,
-.menu > span.is-active,
-.menu > li.is-active,
-.menu > a.is-active:hover,
-.menu > span.is-active:hover,
-.menu > li.is-active:hover {
+.menu a.is-active,
+.menu span.is-active,
+.menu li.is-active,
+.menu a.is-active:hover,
+.menu span.is-active:hover,
+.menu li.is-active:hover {
   color: #eee;
   background-color: #ad1457;
 }
-.menu > a.is-active a,
-.menu > span.is-active a,
-.menu > li.is-active a,
-.menu > a.is-active:hover a,
-.menu > span.is-active:hover a,
-.menu > li.is-active:hover a {
+.menu a.is-active a,
+.menu span.is-active a,
+.menu li.is-active a,
+.menu a.is-active:hover a,
+.menu span.is-active:hover a,
+.menu li.is-active:hover a {
   color: #eee;
 }
 .menu.vertical {

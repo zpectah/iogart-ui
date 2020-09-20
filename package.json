@@ -1,6 +1,6 @@
 {
   "name": "@zpectah/iogart-ui",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "CSS toolkit for easy web app development",
   "main": "src/styles/index.styl",
   "scripts": {
