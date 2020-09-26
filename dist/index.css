@@ -4298,7 +4298,7 @@ caption {
   border-top: 1px solid #eee !important;
 }
 .b-t-none {
-  border: none !important;
+  border-top: none !important;
 }
 .b-r {
   border-right: 1px solid #eee !important;

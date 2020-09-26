@@ -4,6 +4,9 @@
 ## Description
 CSS toolkit for easy web app development. See full documentation here ... //TODO
 
+## Package
+``$ npm i zpectah/iogart-ui``
+
 ## Development & Custom build
 ``$ npm install``
 
